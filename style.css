@@ -1,0 +1,586 @@
+/* Définition des polices personnalisées */
+
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot');
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+/* Eléments principaux de la page */
+
+body
+{
+    background: url('images/fond_jaune.png'); /*background: #D6CECE; url('images/fond_jaune.png')*/
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+}
+
+#bloc_page
+{
+    width: 1100px;
+    margin: auto;
+}
+
+section h1, footer h1, nav a
+{
+    font-family: Dayrom, serif; /* police du texte */
+    font-weight: normal; 
+    text-transform: uppercase; /*  titres soient toujours écrits en majuscules */
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+/* L'en-tête */
+
+header
+{
+    background: url('images/separateur.png') repeat-x bottom;
+    display: flex; /* Les blocs se placent par défaut côte à côte */
+    justify-content: space-between; /* Les éléments sont étirés sur tout l'axe. (Espace entre eux) */
+    align-items: flex-end; /* axe secondaire: alignés à la fin */
+}
+
+#titre_principal
+{
+    display: flex; /* Les blocs se placent par défaut côte à côte */
+    flex-direction: column; /* organisés sur une colonne */
+}
+
+#logo_euro2017
+{
+    display: flex; /* Les blocs se placent par défaut côte à côte */
+    flex-direction: row; /* organisés sur une ligne (par défaut) */
+    align-items: baseline;
+}
+
+/*#logo_euro2017 img ajuster taille logo_euro2017
+{
+    width: 59px;
+    height: 60px;
+}*/
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif; /* police du texte */
+    font-size: 2.5em; /* taille du texte */
+    font-weight: normal;
+    margin: 0 0 0 20px;
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+nav
+{
+	display: flex; /* Les blocs se placent par défaut côte à côte */
+	flex-direction: row-reverse;
+	align-items: flex-end;
+}
+
+.logo_euro2017_mini
+{
+	display: flex;
+	margin-bottom: 20px;
+}
+
+nav ul
+{
+    list-style-type: none; /* supprimer les puces */
+    display: flex; /* Les blocs se placent par défaut côte à côte */
+}
+
+nav li
+{
+    margin-right: 15px; /* marge depuis la droite de 15px puis entre chaque liens de 15px */
+}
+
+nav a
+{
+    font-size: 1.3em; /* taille du texte */
+    color: #181818; /* couleur du texte */
+    /*padding-bottom: 3px;*/
+    text-decoration: none;
+}
+
+nav a:hover /*apparence au survol des liens */
+{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+    /*text-decoration: underline;*/
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Bannière */
+
+#banniere_image
+{
+    margin-top: 15px; /* marge extérieure de 15px en haut */
+    height: 300px; /* hauteur bannière 200px */
+    border-radius: 5px; /* bordures arrondies bannière 5px */
+    background: url('images/equipe1_portugal.jpg') no-repeat; /* image de fond qui ne se répète pas */
+    position: relative;
+    box-shadow: 0px 4px 4px #1c1a19; /* ombre des boites */
+    margin-bottom: 25px; /* marge extérieure en bas de 25px */
+    width: 1100px;
+}
+
+#banniere_description
+{
+    position: absolute; /* bannière sur bannière_image */
+    bottom: 0; /* bannière tout en bas */
+    border-radius: 0px 0px 5px 5px; /* bordures arrondies bannière */
+    width: 1096.5px; /* largeur bannière */
+    height: 23px; /* hauteur bannière */
+    padding-top: 15px; /*marge intérieure haut */
+    padding-left: 4px; /* marge intérieure gauche */
+    background-color: rgba(24,24,24,0.8); /* couleur fond de la bannière */
+    color: white; /* couleur du texte */
+    font-size: 0.8em; /* taille du texte */
+
+}
+
+.bouton_rouge
+{
+    height: 21px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.bouton_rouge img
+{
+    border: 0;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Corps */
+
+section
+{
+    display: flex; /* Les blocs se placent par défaut côte à côte */
+    margin-bottom: 20px;
+}
+
+article, aside
+{
+    text-align: justify;
+}
+
+article
+{
+    margin-right: 20px;
+    flex: 3;
+}
+
+.icon_portugal
+{
+    vertical-align: middle; /* texte à droite de l'icone au milieu.. */
+    margin-right: 8px; /* ..situé 8 px de décalage droite */
+}
+
+article p
+{
+    font-size: 1.2em; /* taille texte article */
+}
+
+aside
+{
+    flex: 0.9;
+    position: relative;
+    background-color: #706b64;
+    box-shadow: 0px 2px 5px #1c1a19;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+}
+
+#fleche_bulle
+{
+    position: absolute;
+    top: 100px;
+    left: -12px;
+}
+
+#photo_moi
+{
+    text-align: center;
+}
+
+#photo_moi img
+{
+    border: 1px solid #181818;
+}
+
+aside img
+{
+    margin-right: 5px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Footer */
+
+footer
+{
+    display: flex;
+    background:  url('images/ico_top.png') no-repeat top center, 
+    url('images/separateur.png') repeat-x top, 
+    url('images/ombre.png') repeat-x top;
+    padding-top: 25px;
+}
+
+footer p
+{
+    font-size: 0.8em;
+}
+
+footer h1
+{
+    font-size: 1.1em;
+}
+
+#tweet
+{
+    width: 28%;
+}
+
+#mes_photos
+{
+    width: 35%;
+}
+
+#mes_photos img
+{
+    border: 1px solid #181818;
+    margin-right: 2px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
+/* TABLEAU classement + image tirage au sort */
+
+.tableau
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.caption /* ="Les Portugaises sont dans le groupe D:" */
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.classement /* classement poule D */
+{
+    margin-left: px;
+    text-align: center;
+    border-color: black;   
+}
+
+.row1:hover{background-color:#f5f5f5} /* apparence au survol de chaque ligne au classement */
+
+.draw
+{
+    height: 250px; /* hauteur image tirage au sort */
+}
+
+.row /* couleur de fond de la ligne 1 du classement poule D */
+{
+    background-color: #CACCCF;
+}
+
+.abbrElem
+{
+    color:;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------*/
+.listematchs /* bloc (titre + match + stade) des 3 matchs de poules du fichier competition.html */
+{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+
+
+.date_match1, .date_match2, .date_match3 
+{
+    /*font-family: courrier new;*/
+}
+
+.icone_esp, .icone_sco, .icone_eng, .icone_por
+{
+    text-align: center;
+}
+
+.heure
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.stade
+{
+    text-align: center;
+    font-size: 0.6em;
+}
+
+.maillotvalente
+{
+    margin-top: 53px;
+    box-shadow: 3px 3px 1px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*thead 
+{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-top-color: inherit;
+    border-right-color: inherit;
+    border-bottom-color: inherit;
+    border-left-color: inherit;
+}*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Media queries */
+
+/* La page */
+/*Pour tous les types d'écrans, si la largeur de la fenêtre ne dépasse pas 1024 px*/
+@media all and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+    }
+}
+
+/* Le menu de navigation */
+@media all and (max-width: 1024px)
+{
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul
+    {
+        flex-direction: column;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+    }
+}
+
+/* La bannière */
+@media all and (max-width: 1024px)
+{
+    #banniere_image
+    {
+        display: none;
+    }
+}
+
+/* Le bloc « À propos de l'auteur » */
+@media all and (max-width: 1024px)
+{
+    section
+    {
+        flex-direction: column;
+    }
+
+    article, aside
+    {
+        width: auto;
+        margin-bottom: 15px;
+    }
+    
+    #fleche_bulle
+    {
+        display: none;
+    }
+    
+    #photo_zozor img
+    {
+        width: 110px;
+        float: right;
+        margin-left: 15px;
+    }
+    
+    aside p:last-child
+    {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*h1, h2
+{
+    color: #F50C10; /* Les titres seront en rouge */
+   /* font-size: 3em;
+    border: 3px #F50C10 solid;
+    /* border-top: 3px blue solid;  bordure du haut en bleu, trait simple de 3px */
+    /*border-radius: 100px; /* arrondi de la bordure */
+    /*box-shadow: 6px 6px 25px #F50C10;
+    width: 40%; /* On a indiqué une largeur (obligatoire) */
+   /* margin: auto; /* On peut donc demander à ce que le bloc soit centré avec auto */
+   /* margin-bottom: 20px; 
+   /* text-align: center;
+}*/
+
+
+/* h1
+{
+	font-size: 38px;
+    line-height: 54px;
+    letter-spacing: normal;
+    margin-top: 8px;
+    margin-bottom: 10px;
+} */
+
+/*.introduction
+{
+    color: blue;
+    font-family: arial;
+}
+
+
+a /* Liens par défaut (non survolés) */
+/*{
+	text-decoration: none;
+	color: red;
+	font-style: italic;
+}
+
+a:hover /* Quand on pointe sur un lien */
+/*{
+	text-decoration: underline;
+	color: green;
+}
+
+a:active /* Quand le visiteur clique sur le lien */
+/*{
+	background-color: #FFCC66;
+}
+
+/*.equipe3_portugal
+{
+	float: left;
+}
+
+
+/*.facebook
+{
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.b1
+{
+	border: 2px black solid;
+	margin: 50px;
+	width: 300px;
+	height: 200px;
+	padding: 10px;
+}
+
+#conteneur
+{
+	background-color: pink;
+	color: black;
+	width: 1000px;
+	height: 200px;
+	padding: ;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+/*.element:nth-child(2)  On prend le deuxième bloc élément 
+{
+    align-self: flex-end;  Seul ce bloc sera aligné à la fin 
+} */
